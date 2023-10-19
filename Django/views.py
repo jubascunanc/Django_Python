@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from django.template import loader
-from django.http import 
+from django.template import load
+from django.http import django
 
 def crear_auto(request,marca, modelo,anio):
     
- auto = Auto(marca=marca, modelo=modelo, anio=anio,)   
+ auto = crear_auto(marca=marca, modelo=modelo, anio=anio,)   
 
-auto.save()
+crear_auto.save()
 
-template = loader.get_template('creacion_de_auto.html')
+template = load.get_template('creacion_de_auto.html')
 template_renderizado = template.render({crear_auto})
